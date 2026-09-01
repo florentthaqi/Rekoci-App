@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rekoci">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Rekoci Timepiece</title>
+<style>
+  :root{
+    --gold:#C9A84C; --gold-dim:#8f7736; --dark:#141414; --surface:#1E1E1E;
+    --surface2:#2A2A2A; --surface3:#333; --text:#F0F0F0; --text-dim:#8a8a8a;
+    --green:#4CAF7D; --green-bg:#0D2E1A; --red:#E05555; --red-bg:#2E0D0D;
+    --orange:#E8943A; --orange-bg:#2E1D0D; --blue:#5B8DEF;
+    --r:14px; --st:env(safe-area-inset-top); --sb:env(safe-area-inset-bottom);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;
+       background:var(--dark);color:var(--text);min-height:100vh;overflow-x:hidden}
+  input,select,textarea,button{font-family:inherit}
+
+  /* ---------- LOGIN ---------- */
+  #login{position:fixed;inset:0;background:var(--dark);z-index:900;
+         display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px}
+  #login.hide{display:none}
+  .li-logo{font-size:30px;font-weight:800;color:var(--gold);letter-spacing:6px}
+  .li-sub{font-size:10px;color:var(--text-dim);letter-spacing:3px;margin-top:4px}
+  .li-line{width:44px;height:1px;background:var(--gold);margin:14px auto;opacity:.5}
+  .li-box{width:100%;max-width:340px;margin-top:30px}
+  .li-err{color:var(--red);font-size:13px;margin-top:12px;text-align:center;min-height:18px}
+
+  /* ---------- HEADER ---------- */
+  .header{background:var(--surface);padding:calc(var(--st) + 10px) 18px 10px;
+          border-bottom:1px solid #2a2a2a;position:sticky;top:0;z-index:100}
+  .hrow{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:2px}
+  .logo span{font-weight:300;color:var(--text-dim)}
+  .clock{text-align:right;line-height:1.25}
+  .clock-time{font-size:15px;font-weight:700;color:var(--text);font-variant-numeric:tabular-nums}
+  .clock-date{font-size:10px;color:var(--text-dim)}
+  .sync{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text-dim);margin-top:6px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--orange)}
+
+  /* ---------- NAV ---------- */
+  .nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);
+       border-top:1px solid #2a2a2a;display:flex;padding-bottom:var(--sb);z-index:100}
+  .nbtn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+        padding:8px 0 6px;border:none;background:none;font-size:9.5px;color:var(--text-dim);gap:2px}
+  .nbtn .ic{font-size:19px;line-height:1}
+  .nbtn.active{color:var(--gold)}
+  .nbtn .badge-n{position:absolute;transform:translate(14px,-6px);background:var(--red);
+       color:#fff;font-size:9px;font-weight:700;min-width:15px;height:15px;border-radius:8px;
+       display:flex;align-items:center;justify-content:center;padding:0 4px}
+
+  .screen{display:none;padding:14px 14px calc(var(--sb) + 78px)}
+  .screen.active{display:block}
+
+  /* ---------- MONTH BAR ---------- */
+  .monthbar{display:flex;align-items:center;justify-content:space-between;
+            background:var(--surface);border:1px solid #2a2a2a;border-radius:var(--r);
+            padding:8px 10px;margin-bottom:12px}
+  .mnav{background:var(--surface3);border:none;color:var(--gold);width:32px;height:32px;
+        border-radius:8px;font-size:16px;cursor:pointer}
+  .mnav:disabled{opacity:.3}
+  .mlabel{font-size:14px;font-weight:700;letter-spacing:.5px}
+  .mlabel small{display:block;font-size:9.5px;color:var(--text-dim);font-weight:400;letter-spacing:1px}
+
+  /* ---------- KPI ---------- */
+  .kgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:9px}
+  .kpi{background:var(--surface);border-radius:var(--r);padding:12px 13px;border:1px solid #2a2a2a}
+  .klabel{font-size:9px;font-weight:700;color:var(--text-dim);text-transform:uppercase;
+          letter-spacing:1px;margin-bottom:5px}
+  .kval{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+  .ksub{font-size:10px;color:var(--text-dim);margin-top:3px}
+  .g{color:var(--green)}.r{color:var(--red)}.o{color:var(--orange)}.gd{color:var(--gold)}
+
+  .stitle{font-size:10px;font-weight:800;color:var(--text-dim);text-transform:uppercase;
+          letter-spacing:1.5px;margin:18px 0 9px;display:flex;justify-content:space-between;align-items:center}
+  .stitle a{color:var(--gold);font-size:11px;text-decoration:none;letter-spacing:0}
+
+  /* ---------- CARDS ---------- */
+  .card{background:var(--surface);border-radius:var(--r);padding:12px 14px;margin-bottom:7px;
+        border:1px solid #2a2a2a;cursor:pointer}
+  .card:active{border-color:var(--gold)}
+  .ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .cname{font-size:14px;font-weight:600;flex:1}
+  .camt{font-size:15px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .cbot{display:flex;justify-content:space-between;align-items:center;margin-top:4px;gap:8px}
+  .cmeta{font-size:10.5px;color:var(--text-dim)}
+  .badge{font-size:9px;font-weight:700;padding:3px 7px;border-radius:20px;
+         text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+  .b-vk{background:var(--green-bg);color:var(--green)}
+  .b-ak{background:var(--red-bg);color:var(--red)}
+  .b-lg{background:var(--orange-bg);color:var(--orange)}
+  .b-n{background:var(--surface3);color:var(--text-dim)}
+
+  .mrow{display:flex;justify-content:space-between;margin-top:9px;padding-top:9px;border-top:1px solid #2a2a2a}
+  .mitem{text-align:center;flex:1}
+  .mlab{font-size:8.5px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px}
+  .mval{font-size:12.5px;font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}
+
+  .thumb{width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:10px;
+         background:var(--surface2)}
+
+  /* ---------- TOTALS ---------- */
+  .tbar{background:var(--surface2);border-radius:var(--r);padding:10px 14px;margin-bottom:7px;
+        display:flex;justify-content:space-between;align-items:center;border:1px solid #333}
+  .tlab{font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px}
+  .tval{font-size:16px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
+
+  /* ---------- FAB ---------- */
+  .fab{position:fixed;right:18px;bottom:calc(var(--sb) + 72px);width:52px;height:52px;
+       border-radius:50%;background:var(--gold);color:var(--dark);font-size:26px;border:none;
+       display:flex;align-items:center;justify-content:center;
+       box-shadow:0 4px 20px rgba(201,168,76,.4);z-index:99}
+  .fab:active{transform:scale(.92)}
+
+  /* ---------- MODAL ---------- */
+  .ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;align-items:flex-end}
+  .ov.open{display:flex}
+  .modal{background:var(--surface);width:100%;border-radius:20px 20px 0 0;max-height:93vh;
+         overflow-y:auto;padding:0 0 calc(var(--sb) + 20px);
+         animation:up .28s cubic-bezier(.32,1,.6,1)}
+  @keyframes up{from{transform:translateY(100%)}to{transform:translateY(0)}}
+  .handle{width:36px;height:4px;background:#444;border-radius:2px;margin:11px auto 0}
+  .mhead{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
+         border-bottom:1px solid #2a2a2a}
+  .mtitle{font-size:16px;font-weight:700;color:var(--gold)}
+  .mclose{width:30px;height:30px;border-radius:50%;background:var(--surface3);border:none;
+          color:var(--text);font-size:15px;display:flex;align-items:center;justify-content:center}
+  .mbody{padding:18px}
+
+  /* ---------- FORM ---------- */
+  .fg{margin-bottom:14px}
+  .flab{font-size:10px;font-weight:700;color:var(--text-dim);text-transform:uppercase;
+        letter-spacing:1px;margin-bottom:5px;display:block}
+  .fin{width:100%;background:var(--surface2);border:1px solid #333;border-radius:10px;
+       padding:11px 13px;color:var(--text);font-size:16px;outline:none;-webkit-appearance:none}
+  .fin:focus{border-color:var(--gold)}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .seg{display:grid;gap:7px}
+  .seg2{grid-template-columns:1fr 1fr}
+  .seg3{grid-template-columns:1fr 1fr 1fr}
+  .sbtn{padding:11px 6px;border-radius:10px;border:2px solid transparent;font-size:13px;
+        font-weight:700;background:var(--surface3);color:var(--text-dim);text-align:center}
+  .prev{background:var(--surface2);border-radius:10px;padding:11px 13px;margin:-6px 0 14px;
+        border:1px solid #333}
+  .prow{display:flex;justify-content:space-between;margin-bottom:3px}
+  .prow:last-child{margin-bottom:0;padding-top:6px;border-top:1px solid #333}
+  .pk{font-size:12px;color:var(--text-dim)}
+  .pv{font-size:12px;font-weight:700}
+  .btn{width:100%;padding:14px;border-radius:12px;background:var(--gold);color:var(--dark);
+       font-size:16px;font-weight:700;border:none;margin-top:6px}
+  .btn:active{opacity:.85}
+  .btn2{width:100%;padding:12px;border-radius:12px;background:var(--surface3);color:var(--text);
+        font-size:14px;font-weight:600;border:1px solid #444;margin-top:9px}
+  .btnD{width:100%;padding:12px;border-radius:12px;background:var(--red-bg);color:var(--red);
+        font-size:14px;font-weight:600;border:1px solid var(--red);margin-top:9px}
+
+  /* photo picker */
+  .photobox{width:100%;height:160px;border-radius:12px;border:2px dashed #3d3d3d;
+       background:var(--surface2);display:flex;flex-direction:column;align-items:center;
+       justify-content:center;gap:6px;color:var(--text-dim);font-size:13px;overflow:hidden}
+  .photobox img{width:100%;height:100%;object-fit:cover}
+
+  /* ---------- TODOS ---------- */
+  .pills{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;padding-bottom:3px}
+  .pills::-webkit-scrollbar{display:none}
+  .pill{flex-shrink:0;padding:6px 13px;border-radius:20px;font-size:12px;font-weight:600;
+        border:none;background:var(--surface3);color:var(--text-dim)}
+  .pill.active{background:var(--gold);color:var(--dark)}
+  .tcard{background:var(--surface);border-radius:var(--r);padding:12px 14px;margin-bottom:7px;
+         border:1px solid #2a2a2a;display:flex;align-items:flex-start;gap:11px}
+  .tcard.done{opacity:.45}
+  .tcard.urgent{border-color:var(--red)}
+  .chk{width:22px;height:22px;border-radius:50%;border:2px solid #4a4a4a;flex-shrink:0;
+       display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:1px}
+  .chk.on{background:var(--green);border-color:var(--green);color:#fff}
+  .tbody{flex:1;min-width:0}
+  .ttitle{font-size:14px;font-weight:600}
+  .ttitle.done{text-decoration:line-through;color:var(--text-dim)}
+  .tmeta{font-size:10px;color:var(--text-dim);display:flex;gap:7px;flex-wrap:wrap;margin-top:4px}
+  .tnote{font-size:11.5px;color:var(--text-dim);margin-top:6px;padding-top:6px;border-top:1px solid #2a2a2a}
+  .prog{background:var(--surface);border-radius:var(--r);padding:11px 14px;margin-bottom:11px;
+        border:1px solid #2a2a2a}
+  .pbar{height:6px;background:var(--surface3);border-radius:3px;margin-top:7px;overflow:hidden}
+  .pfill{height:100%;background:var(--gold);border-radius:3px;transition:width .3s}
+
+  .empty{text-align:center;padding:42px 20px;color:var(--text-dim)}
+  .empty .ei{font-size:36px;margin-bottom:10px}
+  .loading{text-align:center;padding:26px;color:var(--text-dim);font-size:13px}
+  .searchbar{width:100%;background:var(--surface2);border:1px solid #333;border-radius:10px;
+       padding:9px 13px;color:var(--text);font-size:15px;outline:none;margin-bottom:11px}
+</style>
+</head>
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="login">
+  <div style="text-align:center">
+    <div class="li-logo">REKOCI</div>
+    <div class="li-line"></div>
+    <div class="li-sub">TIMEPIECE · WOLLERAU</div>
+  </div>
+  <div class="li-box">
+    <div class="fg">
+      <label class="flab">E-Mail</label>
+      <input class="fin" id="li-mail" type="email" autocomplete="username" placeholder="name@rekocitimepiece.ch">
+    </div>
+    <div class="fg">
+      <label class="flab">Passwort</label>
+      <input class="fin" id="li-pw" type="password" autocomplete="current-password" placeholder="••••••••">
+    </div>
+    <button class="btn" id="li-btn">Anmelden</button>
+    <div class="li-err" id="li-err"></div>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<div class="header">
+  <div class="hrow">
+    <div>
+      <div class="logo">REKOCI <span>TIMEPIECE</span></div>
+      <div class="sync"><span class="dot" id="dot"></span><span id="syncTxt">Verbinde…</span>
+        <span id="whoami" style="margin-left:6px"></span></div>
+    </div>
+    <div class="clock">
+      <div class="clock-time" id="clkT">--:--:--</div>
+      <div class="clock-date" id="clkD"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAV ================= -->
+<div class="nav">
+  <button class="nbtn active" id="nav-dash"  onclick="go('dash')"><span class="ic">◈</span><span>Übersicht</span></button>
+  <button class="nbtn"        id="nav-uhren" onclick="go('uhren')"><span class="ic">⌚</span><span>Uhren</span></button>
+  <button class="nbtn"        id="nav-lager" onclick="go('lager')"><span class="ic">▣</span><span>Lager</span></button>
+  <button class="nbtn"        id="nav-kosten" onclick="go('kosten')"><span class="ic">📋</span><span>Kosten</span></button>
+  <button class="nbtn"        id="nav-todos" onclick="go('todos')"><span class="ic">✓</span><span>To-Dos</span></button>
+</div>
+
+<button class="fab" onclick="addNew()">+</button>
+
+<!-- ================= DASHBOARD ================= -->
+<div class="screen active" id="s-dash">
+  <div class="monthbar">
+    <button class="mnav" onclick="shiftMonth(-1)">‹</button>
+    <div style="text-align:center">
+      <div class="mlabel" id="mLabel">—</div>
+      <small id="mHint">Zeitraum</small>
+    </div>
+    <button class="mnav" id="mNext" onclick="shiftMonth(1)">›</button>
+  </div>
+
+  <div class="kgrid">
+    <div class="kpi"><div class="klabel">Umsatz (VK)</div><div class="kval g" id="k-um">—</div><div class="ksub" id="k-um-s"></div></div>
+    <div class="kpi"><div class="klabel">Ankauf (EK)</div><div class="kval r" id="k-ak">—</div><div class="ksub" id="k-ak-s"></div></div>
+  </div>
+  <div class="kgrid">
+    <div class="kpi"><div class="klabel">Marge</div><div class="kval gd" id="k-mg">—</div><div class="ksub" id="k-mg-s"></div></div>
+    <div class="kpi"><div class="klabel">MwSt. Schuld</div><div class="kval o" id="k-mw">—</div><div class="ksub">8.1% auf Marge</div></div>
+  </div>
+  <div class="kgrid">
+    <div class="kpi"><div class="klabel">Betriebskosten</div><div class="kval r" id="k-ko">—</div><div class="ksub" id="k-ko-s"></div></div>
+    <div class="kpi"><div class="klabel">Netto Ergebnis</div><div class="kval gd" id="k-ne">—</div><div class="ksub">Marge − Kosten</div></div>
+  </div>
+
+  <div class="stitle">Heute fällig</div>
+  <div id="d-today"></div>
+
+  <div class="stitle">Lager <a onclick="go('lager')">alle ansehen ›</a></div>
+  <div id="d-lager"></div>
+
+  <div class="stitle">Letzte Einträge</div>
+  <div id="d-recent"><div class="loading">Lade Daten…</div></div>
+
+  <div class="stitle">Daten</div>
+  <button class="btn2" onclick="exportCSV()">Als CSV exportieren</button>
+  <button class="btn2" onclick="doLogout()">Abmelden</button>
+</div>
+
+<!-- ================= UHREN ================= -->
+<div class="screen" id="s-uhren">
+  <input class="searchbar" id="q-uhren" placeholder="Suchen: Modell, Marke, Kunde…" oninput="renderUhren()">
+  <div id="u-tot"></div>
+  <div class="stitle">Alle Uhren</div>
+  <div id="u-list"><div class="loading">Lade Daten…</div></div>
+</div>
+
+<!-- ================= LAGER ================= -->
+<div class="screen" id="s-lager">
+  <div id="l-tot"></div>
+  <div class="stitle">Aktueller Lagerbestand</div>
+  <div id="l-list"><div class="loading">Lade Daten…</div></div>
+</div>
+
+<!-- ================= KOSTEN ================= -->
+<div class="screen" id="s-kosten">
+  <input class="searchbar" id="q-kosten" placeholder="Suchen: Beschreibung, Kategorie…" oninput="renderKosten()">
+  <div id="k-tot"></div>
+  <div class="stitle">Alle Kosten</div>
+  <div id="k-list"><div class="loading">Lade Daten…</div></div>
+</div>
+
+<!-- ================= TODOS ================= -->
+<div class="screen" id="s-todos">
+  <div class="pills">
+    <button class="pill active" id="p-heute"       onclick="fT('heute')">Heute</button>
+    <button class="pill"        id="p-all"         onclick="fT('all')">Alle</button>
+    <button class="pill"        id="p-täglich"     onclick="fT('täglich')">Täglich</button>
+    <button class="pill"        id="p-wöchentlich" onclick="fT('wöchentlich')">Wöchentlich</button>
+    <button class="pill"        id="p-einmalig"    onclick="fT('einmalig')">Einmalig</button>
+    <button class="pill"        id="p-notiz"       onclick="fT('notiz')">Notizen</button>
+    <button class="pill"        id="p-archiv"      onclick="fT('archiv')">Archiv</button>
+  </div>
+  <div id="t-list"></div>
+</div>
+
+<!-- ============ MODAL: UHR ============ -->
+<div class="ov" id="m-uhr"><div class="modal">
+  <div class="handle"></div>
+  <div class="mhead"><div class="mtitle" id="mt-uhr">Uhr erfassen</div>
+    <button class="mclose" onclick="closeM('m-uhr')">✕</button></div>
+  <div class="mbody">
+    <div class="fg"><label class="flab">Typ</label>
+      <div class="seg seg2">
+        <button class="sbtn" id="ty-vk" onclick="setTyp('Verkauf')">⬆ Verkauf</button>
+        <button class="sbtn" id="ty-ak" onclick="setTyp('Ankauf')">⬇ Ankauf</button>
+      </div></div>
+
+    <div class="fg"><label class="flab">Foto der Uhr</label>
+      <label class="photobox" id="pbox" for="u-file">
+        <span style="font-size:26px">📷</span><span>Foto aufnehmen oder wählen</span>
+      </label>
+      <input type="file" id="u-file" accept="image/*" style="display:none" onchange="pickPhoto(event)">
+      <button class="btn2" id="u-delfoto" style="display:none" onclick="clearPhoto()">Foto entfernen</button>
+    </div>
+
+    <div class="fg"><label class="flab">Modell / Beschreibung</label>
+      <input class="fin" id="u-modell" placeholder="z.B. Submariner Date 126610LN"></div>
+
+    <div class="frow">
+      <div class="fg"><label class="flab">Marke</label>
+        <select class="fin" id="u-marke">
+          <option value="">Wählen</option><option>Rolex</option><option>Patek Philippe</option>
+          <option>Audemars Piguet</option><option>Omega</option><option>IWC</option>
+          <option>Breitling</option><option>Cartier</option><option>TAG Heuer</option>
+          <option>Vacheron Constantin</option><option>Andere</option>
+        </select></div>
+      <div class="fg"><label class="flab">Zustand</label>
+        <select class="fin" id="u-zustand">
+          <option>Neuwertig</option><option>Sehr gut</option><option>Gut</option><option>Akzeptabel</option>
+        </select></div>
+    </div>
+
+    <div class="frow">
+      <div class="fg"><label class="flab">Einkauf CHF</label>
+        <input class="fin" id="u-ek" type="number" inputmode="decimal" placeholder="0" oninput="calcU()"></div>
+      <div class="fg"><label class="flab">Verkauf CHF</label>
+        <input class="fin" id="u-vk" type="number" inputmode="decimal" placeholder="0" oninput="calcU()"></div>
+    </div>
+
+    <div class="prev" id="u-prev" style="display:none">
+      <div class="prow"><span class="pk">Marge</span><span class="pv gd" id="pv-mg">—</span></div>
+      <div class="prow"><span class="pk">Marge %</span><span class="pv gd" id="pv-mp">—</span></div>
+      <div class="prow"><span class="pk">MwSt. 8.1% (auf Marge)</span><span class="pv o" id="pv-mw">—</span></div>
+      <div class="prow"><span class="pk">Netto Marge</span><span class="pv g" id="pv-nt">—</span></div>
+    </div>
+
+    <div class="fg"><label class="flab">Kunde — Verkäufer (von wem gekauft)</label>
+      <input class="fin" id="u-vonwem" placeholder="Name"></div>
+    <div class="fg"><label class="flab">Kunde — Käufer (an wen verkauft)</label>
+      <input class="fin" id="u-anwen" placeholder="Name"></div>
+
+    <div class="frow">
+      <div class="fg"><label class="flab">Kanal</label>
+        <select class="fin" id="u-kanal">
+          <option>Showroom</option><option>Chrono24</option><option>eBay</option>
+          <option>Instagram</option><option>Website</option><option>Privat</option>
+        </select></div>
+      <div class="fg"><label class="flab">Zahlung</label>
+        <select class="fin" id="u-zahlung">
+          <option>Banküberweisung</option><option>Bar</option><option>Kreditkarte</option>
+          <option>Chrono24</option><option>eBay</option>
+        </select></div>
+    </div>
+
+    <div class="frow">
+      <div class="fg"><label class="flab">Datum</label><input class="fin" id="u-datum" type="date"></div>
+      <div class="fg"><label class="flab">Ref.-Nr. Uhr</label><input class="fin" id="u-ref" placeholder="optional"></div>
+    </div>
+
+    <div class="fg"><label class="flab">Bemerkung</label><input class="fin" id="u-bem" placeholder="optional"></div>
+
+    <button class="btn" onclick="saveU()">Speichern</button>
+    <button class="btn2" id="u-sold" style="display:none" onclick="markSold()">Als verkauft markieren</button>
+    <button class="btnD" id="u-del" style="display:none" onclick="delU()">Löschen</button>
+  </div>
+</div></div>
+
+<!-- ============ MODAL: KOSTEN ============ -->
+<div class="ov" id="m-kos"><div class="modal">
+  <div class="handle"></div>
+  <div class="mhead"><div class="mtitle">Kosten erfassen</div>
+    <button class="mclose" onclick="closeM('m-kos')">✕</button></div>
+  <div class="mbody">
+    <div class="fg"><label class="flab">Beschreibung</label>
+      <input class="fin" id="k-desc" placeholder="z.B. Miete Showroom September"></div>
+    <div class="fg"><label class="flab">Kategorie</label>
+      <select class="fin" id="k-kat">
+        <option>Miete Showroom</option><option>Auto – Leasing</option><option>Auto – Tank</option>
+        <option>Auto – Service</option><option>Telefon &amp; Internet</option><option>Marketing</option>
+        <option>Buchhaltung</option><option>Personalkosten</option><option>Verpackung &amp; Versand</option>
+        <option>Plattformgebühren</option><option>Bankgebühren</option><option>Versicherung</option>
+        <option>Repräsentation</option><option>Büro &amp; Diverses</option>
+      </select></div>
+    <div class="frow">
+      <div class="fg"><label class="flab">Betrag CHF (inkl. MwSt.)</label>
+        <input class="fin" id="k-betrag" type="number" inputmode="decimal" placeholder="0"></div>
+      <div class="fg"><label class="flab">Zahlung</label>
+        <select class="fin" id="k-zahlung">
+          <option>Banküberweisung</option><option>Kreditkarte</option><option>Bar</option>
+        </select></div>
+    </div>
+    <div class="fg"><label class="flab">Datum</label><input class="fin" id="k-datum" type="date"></div>
+    <div class="fg"><label class="flab">Bemerkung</label><input class="fin" id="k-bem" placeholder="optional"></div>
+    <button class="btn" onclick="saveK()">Speichern</button>
+    <button class="btnD" id="k-del" style="display:none" onclick="delK()">Löschen</button>
+  </div>
+</div></div>
+
+<!-- ============ MODAL: TODO ============ -->
+<div class="ov" id="m-todo"><div class="modal">
+  <div class="handle"></div>
+  <div class="mhead"><div class="mtitle" id="mt-todo">Aufgabe erfassen</div>
+    <button class="mclose" onclick="closeM('m-todo')">✕</button></div>
+  <div class="mbody">
+    <div class="fg"><label class="flab">Titel</label>
+      <input class="fin" id="t-titel" placeholder="z.B. Chrono24 Preise prüfen"></div>
+
+    <div class="fg"><label class="flab">Vorlagen</label>
+      <div class="seg seg2" style="gap:6px">
+        <button class="sbtn" style="font-size:11px" onclick="tpl('Chrono24 &amp; eBay checken')">Chrono24/eBay</button>
+        <button class="sbtn" style="font-size:11px" onclick="tpl('Kundennachrichten beantworten')">Nachrichten</button>
+        <button class="sbtn" style="font-size:11px" onclick="tpl('Rechnungen bezahlen')">Rechnungen</button>
+        <button class="sbtn" style="font-size:11px" onclick="tpl('Lagerbestand prüfen')">Lager</button>
+        <button class="sbtn" style="font-size:11px" onclick="tpl('Uhren suchen')">Uhren suchen</button>
+        <button class="sbtn" style="font-size:11px" onclick="tpl('Kunde kontaktieren')">Kunde</button>
+      </div></div>
+
+    <div class="fg"><label class="flab">Typ</label>
+      <select class="fin" id="t-typ" onchange="typChanged()">
+        <option value="täglich">Täglich</option><option value="wöchentlich">Wöchentlich</option>
+        <option value="einmalig">Einmalig</option><option value="notiz">Notiz</option>
+      </select></div>
+
+    <div class="fg" id="t-wt-g" style="display:none"><label class="flab">Wochentag</label>
+      <select class="fin" id="t-wt">
+        <option>Montag</option><option>Dienstag</option><option>Mittwoch</option><option>Donnerstag</option>
+        <option>Freitag</option><option>Samstag</option><option>Sonntag</option>
+      </select></div>
+
+    <div class="fg" id="t-due-g"><label class="flab">Fällig am</label>
+      <input class="fin" id="t-due" type="date"></div>
+
+    <div class="fg"><label class="flab">Zuständig</label>
+      <div class="seg seg3">
+        <button class="sbtn" id="as-beide" onclick="setAssign('Beide')">Beide</button>
+        <button class="sbtn" id="as-florent" onclick="setAssign('Florent')">Florent</button>
+        <button class="sbtn" id="as-partner" onclick="setAssign('Partner')">Partner</button>
+      </div></div>
+
+    <div class="fg"><label class="flab">Priorität</label>
+      <div class="seg seg3">
+        <button class="sbtn" id="pr-tief" onclick="setPrio('tief')">⬇ Tief</button>
+        <button class="sbtn" id="pr-mittel" onclick="setPrio('mittel')">● Mittel</button>
+        <button class="sbtn" id="pr-hoch" onclick="setPrio('hoch')">⬆ Hoch</button>
+      </div></div>
+
+    <div class="fg"><label class="flab">Erinnerung (Uhrzeit)</label>
+      <input class="fin" id="t-zeit" type="time" value="09:00"></div>
+
+    <div class="fg"><label class="flab">Notiz</label>
+      <textarea class="fin" id="t-notiz" rows="3" style="resize:none" placeholder="Details…"></textarea></div>
+
+    <button class="btn" onclick="saveT()">Speichern</button>
+    <button class="btn2" onclick="dupT()" id="t-dup" style="display:none">Duplizieren</button>
+    <button class="btnD" id="t-del" style="display:none" onclick="delT()">Löschen</button>
+  </div>
+</div></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot, query }
+  from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, setPersistence, browserLocalPersistence }
+  from "https://www.gstatic.com/firebasejs/11.9.0/firebase-auth.js";
+
+const cfg = {
+  apiKey: "AIzaSyCXkyoHO1WXpqIgxlMWrmdNs8mZY3cQK3k",
+  authDomain: "rekoci-app.firebaseapp.com",
+  projectId: "rekoci-app",
+  storageBucket: "rekoci-app.firebasestorage.app",
+  messagingSenderId: "284102701886",
+  appId: "1:284102701886:web:57bb8102d1ad9c2d8b326f"
+};
+const app  = initializeApp(cfg);
+const db   = getFirestore(app);
+const auth = getAuth(app);
+
+/* ---------------- STATE ---------------- */
+let uhren = [], kosten = [], todos = [];
+let curU = null, curK = null, curT = null;
+let typ = 'Verkauf', prio = 'mittel', assign = 'Beide', photo = '';
+let nav = 'dash', tFilter = 'heute';
+let viewMonth = new Date().getMonth(), viewYear = new Date().getFullYear();
+let listenersOn = false;
+
+const MONTHS = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+const WD = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+
+/* ---------------- HELPERS ---------------- */
+const nf0 = n => (n||n===0) ? 'CHF ' + Number(n).toLocaleString('de-CH',{maximumFractionDigits:0}) : '—';
+const nf2 = n => (n||n===0) ? 'CHF ' + Number(n).toLocaleString('de-CH',{minimumFractionDigits:2,maximumFractionDigits:2}) : '—';
+const today = () => new Date().toISOString().split('T')[0];
+const dDE = d => { if(!d) return ''; const p=d.split('-'); return `${p[2]}.${p[1]}.${p[0]}`; };
+const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const daysSince = d => { if(!d) return 0; return Math.max(0, Math.floor((Date.now()-new Date(d+'T00:00:00').getTime())/86400000)); };
+const inMonth = d => { if(!d) return false; const p=d.split('-'); return +p[0]===viewYear && (+p[1]-1)===viewMonth; };
+
+/* ---------------- CLOCK ---------------- */
+function tick(){
+  const n = new Date();
+  const t = document.getElementById('clkT'), dd = document.getElementById('clkD');
+  if(t) t.textContent = n.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  if(dd) dd.textContent = n.toLocaleDateString('de-CH',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
+}
+tick(); setInterval(tick,1000);
+
+/* ---------------- AUTH ---------------- */
+setPersistence(auth, browserLocalPersistence).catch(()=>{});
+
+document.getElementById('li-btn').onclick = async () => {
+  const mail = document.getElementById('li-mail').value.trim();
+  const pw   = document.getElementById('li-pw').value;
+  const err  = document.getElementById('li-err');
+  err.textContent = '';
+  if(!mail || !pw){ err.textContent = 'Bitte E-Mail und Passwort eingeben.'; return; }
+  try { await signInWithEmailAndPassword(auth, mail, pw); }
+  catch(e){
+    const m = {'auth/invalid-credential':'E-Mail oder Passwort falsch.',
+               'auth/invalid-email':'E-Mail-Adresse ungültig.',
+               'auth/too-many-requests':'Zu viele Versuche. Bitte kurz warten.',
+               'auth/network-request-failed':'Keine Internetverbindung.'};
+    err.textContent = m[e.code] || ('Anmeldung fehlgeschlagen (' + e.code + ')');
+  }
+};
+document.getElementById('li-pw').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('li-btn').click(); });
+
+window.doLogout = async () => { if(confirm('Wirklich abmelden?')) await signOut(auth); };
+
+onAuthStateChanged(auth, user => {
+  const li = document.getElementById('login');
+  if(user){
+    li.classList.add('hide');
+    const nm = (user.email||'').split('@')[0];
+    document.getElementById('whoami').textContent = '· ' + nm;
+    if(!listenersOn){ listenersOn = true; startListeners(); }
+  } else {
+    li.classList.remove('hide');
+    document.getElementById('whoami').textContent = '';
+    uhren=[];kosten=[];todos=[];
+  }
+});
+
+/* ---------------- LIVE DATA ---------------- */
+function setSync(ok){
+  document.getElementById('dot').style.background = ok ? 'var(--green)' : 'var(--red)';
+  document.getElementById('syncTxt').textContent = ok ? 'Live' : 'Offline';
+}
+function startListeners(){
+  onSnapshot(query(collection(db,'uhren')), s => {
+    uhren = s.docs.map(d=>({id:d.id,...d.data()})); setSync(true); renderAll();
+  }, ()=>setSync(false));
+  onSnapshot(query(collection(db,'kosten')), s => {
+    kosten = s.docs.map(d=>({id:d.id,...d.data()})); renderAll();
+  }, ()=>setSync(false));
+  onSnapshot(query(collection(db,'todos')), s => {
+    todos = s.docs.map(d=>({id:d.id,...d.data()})); renderAll();
+  }, ()=>setSync(false));
+}
+
+/* ---------------- NAV ---------------- */
+window.go = p => {
+  document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.nbtn').forEach(x=>x.classList.remove('active'));
+  document.getElementById('s-'+p).classList.add('active');
+  document.getElementById('nav-'+p).classList.add('active');
+  nav = p; window.scrollTo(0,0); renderAll();
+};
+window.addNew = () => {
+  if(nav==='kosten') openK();
+  else if(nav==='todos') openT();
+  else openU();
+};
+window.closeM = id => document.getElementById(id).classList.remove('open');
+
+/* ---------------- MONTH ---------------- */
+window.shiftMonth = d => {
+  viewMonth += d;
+  if(viewMonth>11){viewMonth=0;viewYear++}
+  if(viewMonth<0){viewMonth=11;viewYear--}
+  renderDash();
+};
+
+/* =========== UHREN =========== */
+window.setTyp = t => {
+  typ = t;
+  document.getElementById('ty-vk').style.cssText = t==='Verkauf'
+    ? 'background:var(--green-bg);color:var(--green);border-color:var(--green)' : '';
+  document.getElementById('ty-ak').style.cssText = t==='Ankauf'
+    ? 'background:var(--red-bg);color:var(--red);border-color:var(--red)' : '';
+  calcU();
+};
+
+window.pickPhoto = ev => {
+  const f = ev.target.files[0]; if(!f) return;
+  const rd = new FileReader();
+  rd.onload = e => {
+    const im = new Image();
+    im.onload = () => {
+      const MAX = 900;
+      let w = im.width, h = im.height;
+      if(w>h && w>MAX){ h = h*MAX/w; w = MAX; } else if(h>MAX){ w = w*MAX/h; h = MAX; }
+      const c = document.createElement('canvas'); c.width=w; c.height=h;
+      c.getContext('2d').drawImage(im,0,0,w,h);
+      photo = c.toDataURL('image/jpeg',0.6);
+      showPhoto();
+    };
+    im.src = e.target.result;
+  };
+  rd.readAsDataURL(f);
+};
+function showPhoto(){
+  const b = document.getElementById('pbox');
+  const d = document.getElementById('u-delfoto');
+  if(photo){ b.innerHTML = '<img src="'+photo+'">'; d.style.display='block'; }
+  else { b.innerHTML = '<span style="font-size:26px">📷</span><span>Foto aufnehmen oder wählen</span>'; d.style.display='none'; }
+}
+window.clearPhoto = () => { photo=''; document.getElementById('u-file').value=''; showPhoto(); };
+
+window.calcU = () => {
+  const ek = parseFloat(document.getElementById('u-ek').value)||0;
+  const vk = parseFloat(document.getElementById('u-vk').value)||0;
+  const p  = document.getElementById('u-prev');
+  if(typ==='Verkauf' && (ek>0||vk>0)){
+    const mg = vk-ek, mw = Math.round(mg*0.081*100)/100;
+    document.getElementById('pv-mg').textContent = nf2(mg);
+    document.getElementById('pv-mp').textContent = ek>0 ? (mg/ek*100).toFixed(1)+' %' : '—';
+    document.getElementById('pv-mw').textContent = nf2(mw);
+    document.getElementById('pv-nt').textContent = nf2(mg-mw);
+    p.style.display='block';
+  } else p.style.display='none';
+};
+
+window.openU = id => {
+  curU = id||null;
+  const u = id ? uhren.find(x=>x.id===id) : null;
+  document.getElementById('mt-uhr').textContent = u ? 'Uhr bearbeiten' : 'Uhr erfassen';
+  ['modell','marke','zustand','kanal','zahlung','ref','bem'].forEach(f=>{
+    const el = document.getElementById('u-'+f);
+    if(el) el.value = u?.[f] || (f==='zustand'?'Neuwertig':f==='kanal'?'Showroom':f==='zahlung'?'Banküberweisung':'');
+  });
+  document.getElementById('u-ek').value     = u?.einkauf || '';
+  document.getElementById('u-vk').value     = u?.verkauf || '';
+  document.getElementById('u-vonwem').value = u?.vonwem  || '';
+  document.getElementById('u-anwen').value  = u?.anwen   || '';
+  document.getElementById('u-datum').value  = u?.datum   || today();
+  photo = u?.foto || '';
+  document.getElementById('u-file').value = '';
+  showPhoto();
+  setTyp(u?.typ || 'Verkauf');
+  document.getElementById('u-del').style.display  = u ? 'block':'none';
+  document.getElementById('u-sold').style.display = (u && u.typ==='Ankauf' && u.status!=='verkauft') ? 'block':'none';
+  document.getElementById('m-uhr').classList.add('open');
+};
+
+window.saveU = async () => {
+  const modell = document.getElementById('u-modell').value.trim();
+  if(!modell){ alert('Bitte Modell eingeben.'); return; }
+  const ek = parseFloat(document.getElementById('u-ek').value)||0;
+  const vk = parseFloat(document.getElementById('u-vk').value)||0;
+  const mg = typ==='Verkauf' ? vk-ek : 0;
+  const mw = typ==='Verkauf' ? Math.round(mg*0.081*100)/100 : 0;
+  const d = {
+    typ, modell,
+    marke:   document.getElementById('u-marke').value,
+    zustand: document.getElementById('u-zustand').value,
+    einkauf: ek, verkauf: typ==='Verkauf' ? vk : 0,
+    marge: mg, mwst: mw, netto: mg-mw,
+    margeProz: (typ==='Verkauf' && ek>0) ? Math.round(mg/ek*1000)/10 : 0,
+    vonwem:  document.getElementById('u-vonwem').value.trim(),
+    anwen:   document.getElementById('u-anwen').value.trim(),
+    kanal:   document.getElementById('u-kanal').value,
+    zahlung: document.getElementById('u-zahlung').value,
+    datum:   document.getElementById('u-datum').value,
+    ref:     document.getElementById('u-ref').value.trim(),
+    bem:     document.getElementById('u-bem').value.trim(),
+    foto: photo,
+    status: typ==='Ankauf' ? (uhren.find(x=>x.id===curU)?.status || 'lager') : 'verkauft',
+    von: (auth.currentUser?.email||'').split('@')[0]
+  };
+  try{
+    if(curU) await updateDoc(doc(db,'uhren',curU), d);
+    else     await addDoc(collection(db,'uhren'), d);
+    closeM('m-uhr');
+  }catch(e){ alert('Speichern fehlgeschlagen: '+e.message); }
+};
+window.markSold = async () => {
+  await updateDoc(doc(db,'uhren',curU), {status:'verkauft'});
+  closeM('m-uhr');
+};
+window.delU = async () => {
+  if(!confirm('Eintrag löschen?')) return;
+  await deleteDoc(doc(db,'uhren',curU)); closeM('m-uhr');
+};
+
+/* =========== KOSTEN =========== */
+window.openK = id => {
+  curK = id||null;
+  const k = id ? kosten.find(x=>x.id===id) : null;
+  document.getElementById('k-desc').value    = k?.desc || '';
+  document.getElementById('k-kat').value     = k?.kat  || 'Miete Showroom';
+  document.getElementById('k-betrag').value  = k?.betrag || '';
+  document.getElementById('k-zahlung').value = k?.zahlung || 'Banküberweisung';
+  document.getElementById('k-datum').value   = k?.datum || today();
+  document.getElementById('k-bem').value     = k?.bem || '';
+  document.getElementById('k-del').style.display = k ? 'block':'none';
+  document.getElementById('m-kos').classList.add('open');
+};
+window.saveK = async () => {
+  const desc = document.getElementById('k-desc').value.trim();
+  if(!desc){ alert('Bitte Beschreibung eingeben.'); return; }
+  const b = parseFloat(document.getElementById('k-betrag').value)||0;
+  const d = { desc, kat:document.getElementById('k-kat').value, betrag:b, mwst:0, total:b,
+    zahlung:document.getElementById('k-zahlung').value,
+    datum:document.getElementById('k-datum').value,
+    bem:document.getElementById('k-bem').value.trim(),
+    von:(auth.currentUser?.email||'').split('@')[0] };
+  try{
+    if(curK) await updateDoc(doc(db,'kosten',curK), d);
+    else     await addDoc(collection(db,'kosten'), d);
+    closeM('m-kos');
+  }catch(e){ alert('Speichern fehlgeschlagen: '+e.message); }
+};
+window.delK = async () => {
+  if(!confirm('Eintrag löschen?')) return;
+  await deleteDoc(doc(db,'kosten',curK)); closeM('m-kos');
+};
+
+/* =========== TODOS =========== */
+window.fT = f => {
+  tFilter = f;
+  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+  document.getElementById('p-'+f).classList.add('active');
+  renderTodos();
+};
+window.tpl = t => { document.getElementById('t-titel').value = t; };
+window.typChanged = () => {
+  const v = document.getElementById('t-typ').value;
+  document.getElementById('t-wt-g').style.display  = v==='wöchentlich' ? 'block':'none';
+  document.getElementById('t-due-g').style.display = v==='einmalig'    ? 'block':'none';
+};
+window.setPrio = p => {
+  prio = p;
+  const col = {tief:'var(--green)',mittel:'var(--gold)',hoch:'var(--red)'};
+  ['tief','mittel','hoch'].forEach(x=>{ document.getElementById('pr-'+x).style.cssText=''; });
+  document.getElementById('pr-'+p).style.cssText =
+    `background:var(--surface2);border-color:${col[p]};color:${col[p]}`;
+};
+window.setAssign = a => {
+  assign = a;
+  ['beide','florent','partner'].forEach(x=>{ document.getElementById('as-'+x).style.cssText=''; });
+  document.getElementById('as-'+a.toLowerCase()).style.cssText =
+    'background:var(--surface2);border-color:var(--gold);color:var(--gold)';
+};
+
+window.openT = id => {
+  curT = id||null;
+  const t = id ? todos.find(x=>x.id===id) : null;
+  document.getElementById('mt-todo').textContent = t ? 'Aufgabe bearbeiten' : 'Aufgabe erfassen';
+  document.getElementById('t-titel').value = t?.titel || '';
+  document.getElementById('t-typ').value   = t?.typ   || 'täglich';
+  document.getElementById('t-wt').value    = t?.wt    || 'Montag';
+  document.getElementById('t-due').value   = t?.due   || today();
+  document.getElementById('t-zeit').value  = t?.zeit  || '09:00';
+  document.getElementById('t-notiz').value = t?.notiz || '';
+  typChanged(); setPrio(t?.prio||'mittel'); setAssign(t?.assign||'Beide');
+  document.getElementById('t-del').style.display = t ? 'block':'none';
+  document.getElementById('t-dup').style.display = t ? 'block':'none';
+  document.getElementById('m-todo').classList.add('open');
+};
+
+function todoData(){
+  const ty = document.getElementById('t-typ').value;
+  return { titel: document.getElementById('t-titel').value.trim(), typ: ty, prio, assign,
+    wt:  ty==='wöchentlich' ? document.getElementById('t-wt').value : '',
+    due: ty==='einmalig'    ? document.getElementById('t-due').value : '',
+    zeit: document.getElementById('t-zeit').value,
+    notiz: document.getElementById('t-notiz').value.trim(),
+    von:(auth.currentUser?.email||'').split('@')[0] };
+}
+window.saveT = async () => {
+  const d = todoData();
+  if(!d.titel){ alert('Bitte Titel eingeben.'); return; }
+  try{
+    if(curT) await updateDoc(doc(db,'todos',curT), d);
+    else     await addDoc(collection(db,'todos'), {...d, done:false, createdAt:Date.now()});
+    closeM('m-todo');
+  }catch(e){ alert('Speichern fehlgeschlagen: '+e.message); }
+};
+window.dupT = async () => {
+  const d = todoData();
+  await addDoc(collection(db,'todos'), {...d, titel:d.titel+' (Kopie)', done:false, createdAt:Date.now()});
+  closeM('m-todo');
+};
+window.delT = async () => {
+  if(!confirm('Aufgabe löschen?')) return;
+  await deleteDoc(doc(db,'todos',curT)); closeM('m-todo');
+};
+window.toggleT = async (e,id) => {
+  e.stopPropagation();
+  const t = todos.find(x=>x.id===id); if(!t) return;
+  await updateDoc(doc(db,'todos',id), {done:!t.done, doneAt: !t.done ? Date.now() : null});
+};
+
+/* =========== CSV EXPORT =========== */
+window.exportCSV = () => {
+  const q = s => '"' + String(s??'').replace(/"/g,'""') + '"';
+  let out = 'REKOCI TIMEPIECE — Export ' + new Date().toLocaleString('de-CH') + '\n\n';
+  out += 'UHREN\n';
+  out += ['Datum','Typ','Modell','Marke','Zustand','Einkauf','Verkauf','Marge','Marge %','MwSt 8.1%','Netto','Verkäufer','Käufer','Kanal','Zahlung','Ref','Status','Bemerkung']
+          .map(q).join(';') + '\n';
+  [...uhren].sort((a,b)=>(a.datum||'').localeCompare(b.datum||'')).forEach(u=>{
+    out += [u.datum,u.typ,u.modell,u.marke,u.zustand,u.einkauf,u.verkauf,u.marge,u.margeProz,
+            u.mwst,u.netto,u.vonwem,u.anwen,u.kanal,u.zahlung,u.ref,u.status,u.bem].map(q).join(';') + '\n';
+  });
+  out += '\nBETRIEBSKOSTEN\n';
+  out += ['Datum','Beschreibung','Kategorie','Betrag inkl. MwSt','Zahlung','Bemerkung'].map(q).join(';') + '\n';
+  [...kosten].sort((a,b)=>(a.datum||'').localeCompare(b.datum||'')).forEach(k=>{
+    out += [k.datum,k.desc,k.kat,k.betrag,k.zahlung,k.bem].map(q).join(';') + '\n';
+  });
+  const blob = new Blob(['\ufeff'+out], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Rekoci_Export_' + today() + '.csv';
+  a.click();
+};
+
+/* =========== RENDER =========== */
+function renderAll(){ renderDash(); renderUhren(); renderLager(); renderKosten(); renderTodos(); updateBadge(); }
+
+function uhrCard(u, showFoto){
+  const vk = u.typ==='Verkauf';
+  const lager = u.typ==='Ankauf' && u.status!=='verkauft';
+  const kunde = vk ? (u.anwen?'→ '+esc(u.anwen):'') : (u.vonwem?'← '+esc(u.vonwem):'');
+  return `<div class="card" onclick="openU('${u.id}')">
+    ${showFoto && u.foto ? `<img class="thumb" src="${u.foto}">` : ''}
+    <div class="ctop"><div class="cname">${esc(u.modell)}</div>
+      <div class="camt ${vk?'g':'r'}">${nf0(vk?u.verkauf:u.einkauf)}</div></div>
+    <div class="cbot"><div class="cmeta">${dDE(u.datum)} · ${esc(u.marke||'')} ${kunde}</div>
+      <span class="badge ${lager?'b-lg':vk?'b-vk':'b-ak'}">${lager?'Lager':u.typ}</span></div>
+    ${vk ? `<div class="mrow">
+      <div class="mitem"><div class="mlab">Marge</div><div class="mval gd">${nf0(u.marge)}</div></div>
+      <div class="mitem"><div class="mlab">Marge %</div><div class="mval gd">${u.margeProz?u.margeProz+' %':'—'}</div></div>
+      <div class="mitem"><div class="mlab">MwSt.</div><div class="mval o">${nf2(u.mwst)}</div></div>
+      <div class="mitem"><div class="mlab">Netto</div><div class="mval g">${nf2(u.netto)}</div></div>
+    </div>` : lager ? `<div class="mrow">
+      <div class="mitem"><div class="mlab">Im Lager seit</div><div class="mval o">${daysSince(u.datum)} Tage</div></div>
+      <div class="mitem"><div class="mlab">Gebundenes Kapital</div><div class="mval r">${nf0(u.einkauf)}</div></div>
+    </div>` : ''}
+  </div>`;
+}
+
+/* ---- DASHBOARD ---- */
+function renderDash(){
+  const now = new Date();
+  const isCur = viewMonth===now.getMonth() && viewYear===now.getFullYear();
+  document.getElementById('mLabel').textContent = MONTHS[viewMonth] + ' ' + viewYear;
+  document.getElementById('mHint').textContent  = isCur ? 'AKTUELLER MONAT' : 'ZEITRAUM';
+  document.getElementById('mNext').disabled = (viewYear>now.getFullYear()) ||
+        (viewYear===now.getFullYear() && viewMonth>=now.getMonth());
+
+  const mU = uhren.filter(u=>inMonth(u.datum));
+  const mK = kosten.filter(k=>inMonth(k.datum));
+  const um = mU.filter(u=>u.typ==='Verkauf').reduce((s,u)=>s+(u.verkauf||0),0);
+  const ak = mU.filter(u=>u.typ==='Ankauf').reduce((s,u)=>s+(u.einkauf||0),0);
+  const mg = mU.reduce((s,u)=>s+(u.marge||0),0);
+  const mw = mU.reduce((s,u)=>s+(u.mwst||0),0);
+  const ko = mK.reduce((s,k)=>s+(k.total||0),0);
+  const ne = mg-ko;
+  const nVK = mU.filter(u=>u.typ==='Verkauf').length;
+  const nAK = mU.filter(u=>u.typ==='Ankauf').length;
+  const avgP = nVK ? (mU.filter(u=>u.typ==='Verkauf').reduce((s,u)=>s+(u.margeProz||0),0)/nVK) : 0;
+
+  document.getElementById('k-um').textContent = nf0(um);
+  document.getElementById('k-ak').textContent = nf0(ak);
+  document.getElementById('k-mg').textContent = nf0(mg);
+  document.getElementById('k-mw').textContent = nf2(mw);
+  document.getElementById('k-ko').textContent = nf0(ko);
+  const neEl = document.getElementById('k-ne');
+  neEl.textContent = nf0(ne);
+  neEl.className = 'kval ' + (ne>=0?'g':'r');
+  document.getElementById('k-um-s').textContent = nVK + (nVK===1?' Verkauf':' Verkäufe');
+  document.getElementById('k-ak-s').textContent = nAK + (nAK===1?' Ankauf':' Ankäufe');
+  document.getElementById('k-mg-s').textContent = avgP ? '⌀ ' + avgP.toFixed(1) + ' % Marge' : '';
+  document.getElementById('k-ko-s').textContent = mK.length + ' Positionen';
+
+  /* heute fällig */
+  const wd = WD[now.getDay()], td = today();
+  const due = todos.filter(t=>!t.done && (
+      t.typ==='täglich' || (t.typ==='wöchentlich' && t.wt===wd) ||
+      (t.typ==='einmalig' && t.due && t.due<=td)));
+  document.getElementById('d-today').innerHTML = due.length
+    ? due.slice(0,4).map(todoCard).join('') + (due.length>4
+        ? `<div class="cmeta" style="text-align:center;padding:6px">+ ${due.length-4} weitere</div>`:'')
+    : `<div class="card" style="text-align:center;color:var(--text-dim);cursor:default">Alles erledigt für heute ✓</div>`;
+
+  /* lager kurz */
+  const lg = uhren.filter(u=>u.typ==='Ankauf' && u.status!=='verkauft')
+                  .sort((a,b)=>daysSince(b.datum)-daysSince(a.datum));
+  document.getElementById('d-lager').innerHTML = lg.length
+    ? `<div class="tbar"><span class="tlab">${lg.length} Uhren im Lager</span>
+        <span class="tval r">${nf0(lg.reduce((s,u)=>s+(u.einkauf||0),0))}</span></div>`
+      + lg.slice(0,2).map(u=>uhrCard(u,false)).join('')
+    : `<div class="card" style="text-align:center;color:var(--text-dim);cursor:default">Kein Lagerbestand</div>`;
+
+  /* letzte einträge */
+  const all = [...mU.map(u=>({...u,_t:'u'})), ...mK.map(k=>({...k,_t:'k'}))]
+    .sort((a,b)=>(b.datum||'').localeCompare(a.datum||'')).slice(0,5);
+  const el = document.getElementById('d-recent');
+  el.innerHTML = all.length ? all.map(e => e._t==='u' ? uhrCard(e,false) : kosCard(e)).join('')
+    : `<div class="empty"><div class="ei">⌚</div><p>Keine Einträge in ${MONTHS[viewMonth]} ${viewYear}.</p></div>`;
+}
+
+/* ---- UHREN ---- */
+function renderUhren(){
+  const qEl = document.getElementById('q-uhren');
+  const q = (qEl?qEl.value:'').toLowerCase().trim();
+  let list = [...uhren].sort((a,b)=>(b.datum||'').localeCompare(a.datum||''));
+  if(q) list = list.filter(u => [u.modell,u.marke,u.vonwem,u.anwen,u.ref,u.kanal]
+        .some(f => String(f||'').toLowerCase().includes(q)));
+
+  const vkL = list.filter(u=>u.typ==='Verkauf');
+  document.getElementById('u-tot').innerHTML = `
+    <div class="tbar"><span class="tlab">Verkauf Total</span><span class="tval g">${nf0(vkL.reduce((s,u)=>s+(u.verkauf||0),0))}</span></div>
+    <div class="tbar"><span class="tlab">Ankauf Total</span><span class="tval r">${nf0(list.filter(u=>u.typ==='Ankauf').reduce((s,u)=>s+(u.einkauf||0),0))}</span></div>
+    <div class="tbar"><span class="tlab">Marge Total</span><span class="tval">${nf0(list.reduce((s,u)=>s+(u.marge||0),0))}</span></div>
+    <div class="tbar"><span class="tlab">MwSt. geschuldet</span><span class="tval o">${nf2(list.reduce((s,u)=>s+(u.mwst||0),0))}</span></div>`;
+
+  const el = document.getElementById('u-list');
+  el.innerHTML = list.length ? list.map(u=>uhrCard(u,true)).join('')
+    : `<div class="empty"><div class="ei">⌚</div><p>${q?'Nichts gefunden.':'Noch keine Uhren erfasst.'}</p></div>`;
+}
+
+/* ---- LAGER ---- */
+function renderLager(){
+  const lg = uhren.filter(u=>u.typ==='Ankauf' && u.status!=='verkauft')
+                  .sort((a,b)=>daysSince(b.datum)-daysSince(a.datum));
+  const kap = lg.reduce((s,u)=>s+(u.einkauf||0),0);
+  const avg = lg.length ? Math.round(lg.reduce((s,u)=>s+daysSince(u.datum),0)/lg.length) : 0;
+  document.getElementById('l-tot').innerHTML = `
+    <div class="tbar"><span class="tlab">Uhren im Lager</span><span class="tval">${lg.length}</span></div>
+    <div class="tbar"><span class="tlab">Gebundenes Kapital</span><span class="tval r">${nf0(kap)}</span></div>
+    <div class="tbar"><span class="tlab">⌀ Liegedauer</span><span class="tval o">${avg} Tage</span></div>`;
+  document.getElementById('l-list').innerHTML = lg.length ? lg.map(u=>uhrCard(u,true)).join('')
+    : `<div class="empty"><div class="ei">▣</div><p>Kein Lagerbestand.<br>Ankäufe erscheinen hier automatisch.</p></div>`;
+}
+
+/* ---- KOSTEN ---- */
+function kosCard(k){
+  return `<div class="card" onclick="openK('${k.id}')">
+    <div class="ctop"><div class="cname">${esc(k.desc)}</div>
+      <div class="camt r">${nf0(k.total)}</div></div>
+    <div class="cbot"><div class="cmeta">${dDE(k.datum)} · ${esc(k.zahlung||'')}</div>
+      <span class="badge b-n">${esc(k.kat)}</span></div></div>`;
+}
+function renderKosten(){
+  const qEl = document.getElementById('q-kosten');
+  const q = (qEl?qEl.value:'').toLowerCase().trim();
+  let list = [...kosten].sort((a,b)=>(b.datum||'').localeCompare(a.datum||''));
+  if(q) list = list.filter(k => [k.desc,k.kat,k.bem].some(f=>String(f||'').toLowerCase().includes(q)));
+  document.getElementById('k-tot').innerHTML = `
+    <div class="tbar"><span class="tlab">Total Betriebskosten</span><span class="tval r">${nf0(list.reduce((s,k)=>s+(k.total||0),0))}</span></div>
+    <div class="tbar"><span class="tlab">Anzahl Positionen</span><span class="tval">${list.length}</span></div>`;
+  const el = document.getElementById('k-list');
+  el.innerHTML = list.length ? list.map(kosCard).join('')
+    : `<div class="empty"><div class="ei">📋</div><p>${q?'Nichts gefunden.':'Noch keine Kosten erfasst.'}</p></div>`;
+}
+
+/* ---- TODOS ---- */
+function todoCard(t){
+  const col = {hoch:'var(--red)',mittel:'var(--gold)',tief:'var(--green)'};
+  const lab = {hoch:'Hoch',mittel:'Mittel',tief:'Tief'};
+  const overdue = t.typ==='einmalig' && t.due && t.due < today() && !t.done;
+  return `<div class="tcard ${t.done?'done':''} ${t.prio==='hoch'&&!t.done?'urgent':''}" onclick="openT('${t.id}')">
+    <div class="chk ${t.done?'on':''}" onclick="toggleT(event,'${t.id}')">${t.done?'✓':''}</div>
+    <div class="tbody">
+      <div class="ttitle ${t.done?'done':''}">${esc(t.titel)}</div>
+      <div class="tmeta">
+        <span style="color:${col[t.prio]||'var(--gold)'}">● ${lab[t.prio]||''}</span>
+        <span>${t.typ==='wöchentlich'?esc(t.wt):esc(t.typ.charAt(0).toUpperCase()+t.typ.slice(1))}</span>
+        ${t.zeit?'<span>🕐 '+esc(t.zeit)+'</span>':''}
+        ${t.due?`<span style="color:${overdue?'var(--red)':'var(--text-dim)'}">📅 ${dDE(t.due)}${overdue?' überfällig':''}</span>`:''}
+        ${t.assign&&t.assign!=='Beide'?'<span>👤 '+esc(t.assign)+'</span>':''}
+      </div>
+      ${t.notiz?'<div class="tnote">'+esc(t.notiz)+'</div>':''}
+    </div></div>`;
+}
+function renderTodos(){
+  const el = document.getElementById('t-list'); if(!el) return;
+  const wd = WD[new Date().getDay()], td = today();
+  let list;
+  if(tFilter==='heute')       list = todos.filter(t=>!t.done && (t.typ==='täglich' ||
+                                   (t.typ==='wöchentlich'&&t.wt===wd) ||
+                                   (t.typ==='einmalig'&&t.due&&t.due<=td)));
+  else if(tFilter==='archiv') list = todos.filter(t=>t.done);
+  else if(tFilter==='all')    list = todos.filter(t=>!t.done);
+  else                        list = todos.filter(t=>t.typ===tFilter);
+
+  const done = todos.filter(t=>t.done).length, open = todos.filter(t=>!t.done).length;
+  const tot = done+open;
+  const prog = tot ? `<div class="prog">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:12px;color:var(--text-dim)">Erledigt</span>
+        <span style="font-size:13px;font-weight:700;color:var(--gold)">${done}/${tot}</span></div>
+      <div class="pbar"><div class="pfill" style="width:${done/tot*100}%"></div></div></div>` : '';
+
+  const ord = {hoch:0,mittel:1,tief:2};
+  const sorted = [...list].sort((a,b)=>{
+    if(a.done!==b.done) return a.done?1:-1;
+    return (ord[a.prio]??1)-(ord[b.prio]??1);
+  });
+  el.innerHTML = prog + (sorted.length ? sorted.map(todoCard).join('')
+    : `<div class="empty"><div class="ei">✓</div><p>${tFilter==='archiv'?'Noch nichts erledigt.':'Keine Aufgaben hier.'}</p></div>`);
+}
+
+function updateBadge(){
+  const wd = WD[new Date().getDay()], td = today();
+  const n = todos.filter(t=>!t.done && (t.typ==='täglich' ||
+        (t.typ==='wöchentlich'&&t.wt===wd) ||
+        (t.typ==='einmalig'&&t.due&&t.due<=td))).length;
+  const b = document.getElementById('nav-todos');
+  let s = b.querySelector('.badge-n');
+  if(n>0){ if(!s){ s=document.createElement('span'); s.className='badge-n'; b.appendChild(s);} s.textContent=n; }
+  else if(s) s.remove();
+}
+
+/* ---- INIT ---- */
+document.querySelectorAll('.ov').forEach(o=>{
+  o.addEventListener('click', e=>{ if(e.target===o) o.classList.remove('open'); });
+});
+renderAll();
+</script>
+</body>
+</html>
